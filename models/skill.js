@@ -1,6 +1,6 @@
 const skills = [
     { id: 0, name: 'javascript', competency: 'intermediate', certification: 'none yet (GA SEI loading)', details: "I believe it's the drunk creepy uncle of programming... But, as it seems industry still can't stop loving their uncle, so I'm learning to get along with him" },
-    { id: 7, name: 'css', competency: 'like, master?', certification: 'none', details: "It's not that I hard it find... I guess I'd prefer a little sass, that's all..." },
+    { id: 7, name: 'css', competency: 'like, master?', certification: 'none', details: "It's not that I hard it find, or like confusing, or like impossible to manage... I guess I'd prefer a little sass, that's all..." },
     { id: 1, name: 'python', competency: 'intermediate', certification: 'none', details: "Know it, love it! It's open, it's standardized and you can't get 1+1=11 like some other languages... Looking at you js!" },
     { id: 2, name: 'dotnet', competency: 'beginner', certification: 'none', details: "Pretty cool (for a statically-typed language). A bit too static and patterrn-y at times, but Microsoft's best ever decision to open-source it (for the most part) AND make it cross-platform makes it one of the most robust languages in my eyes." },
     { id: 3, name: 'design patterns', competency: 'intermediate', certification: 'none', details: "Can't stand them. Can't do without them." },
