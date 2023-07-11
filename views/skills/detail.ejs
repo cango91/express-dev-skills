@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <%- include('../style', skill) %>
+        <title>my <%= skill.name %> skill</title>
+        <style>
+            .expand-collapse:hover {
+                font-weight: 400;
+            }
+
+            .collapsed {
+                visibility: hidden;
+            }
+
+            .expanded {
+                visibility: visible;
+            }
+        </style>
+        <script>
+            const expanded = '^';
+            const collapsed = '<<expand at your own expense>>';
+        </script>
+</head>
+
+<body>
+    <h2><a href="/skills">&lt;&lt;</a></h2>
+    <h2>
+        <%= skill.name %>
+    </h2>
+    <ul style="list-style: none;">
+        <li>
+            <b>competency: </b>
+            <%= skill.competency %>
+        </li>
+        <li>
+            <b>certification: </b>
+            <%= skill.certification %>
+        </li>
+        <li>
+            <b>my private thoughts: </b><a href="#" class="expand-collapse">&lt;&ltexpand at your own
+                expense&gt;&gt;</a><div id="private" class="collapsed">
+                <%= skill.details %>
+                </div>
+            <script>
+                const expandBtn = document.querySelector('.expand-collapse');
+                const priv = document.getElementById('private');
+                expandBtn.addEventListener('click',()=>{
+                    if(priv.classList.contains('collapsed')){
+                        priv.classList.add('expanded');
+                        priv.classList.remove('collapsed');
+                        expandBtn.innerText = expanded;
+                    }else{
+                        expandBtn.innerText = collapsed;
+                        priv.classList.add('collapsed');
+                        priv.classList.remove('expanded');
+                    }
+                })
+            </script>
+        </li>
+    </ul>
+</body>
+
+</html>
