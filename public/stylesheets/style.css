@@ -18,3 +18,41 @@ a:hover{
 #private{
   padding: 10px;
 }
+
+div {
+  padding: 15px;
+}
+
+form{
+  display: flex;
+  flex-direction: column;
+}
+
+textarea,
+input{
+  background-color:bisque;
+  border: 5px solid #8a0909;
+}
+
+textarea{
+  min-width: 300px;
+  min-height: 100px;
+}
+
+form div label{
+  display: flex;
+  flex-direction: column;
+  align-items:start;
+  font-weight: bold;
+}
+
+form button{
+  font-family: Menlo, Consolas, monospace;
+  font-weight: bold;
+}
+
+form button:hover{
+  font-family: Menlo, Consolas, monospace;
+  font-weight: bold;
+  cursor: pointer;
+}

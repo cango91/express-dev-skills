@@ -1,3 +1,4 @@
+const { v4: uuid} = require('uuid');
 const skills = [
     { id: 0, name: 'javascript', competency: 'intermediate', certification: 'none yet (GA SEI loading)', details: "I believe it's the drunk creepy uncle of programming... But, as it seems industry still can't stop loving their uncle, so I'm learning to get along with him" },
     { id: 7, name: 'css', competency: 'like, master?', certification: 'none', details: "It's not that I hard it find, or like confusing, or like impossible to manage... I guess I'd prefer a little sass, that's all..." },
@@ -14,7 +15,27 @@ const getOne = (id) => skills.find(skl => skl.id == id);
 
 const getAll = () => skills;
 
+const deleteOne = (id) => skills.splice(skills.findIndex(skill => skill.id == id), 1);
+
+const update = (id,newData) => {
+    const skill = getOne(id);
+    skill.name = newData.name;
+    skill.competency = newData.competency;
+    skill.certification = newData.certification;
+    skill.details = newData.details;
+}
+
+const create = (skill) => {
+    const id = uuid();
+    skill.id = id;
+    skills.push(skill);
+}
+
+
 module.exports = {
     getAll,
     getOne,
+    new: create,
+    delete: deleteOne,
+    update,
 };

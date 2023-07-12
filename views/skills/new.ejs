@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <title>
+        <%= title %>
+    </title>
+</head>
+
+<body>
+    <h2><a href="/skills">&lt;&lt;</a></h2>
+    <h1>skill.create&#40&#41</h1>
+
+    <form action="/skills" method="post">
+        <div>
+            <label>skill.name:
+                <input type="text" name="name" autocomplete="off">
+            </label>
+        </div>
+        <div>
+            <label>skill.competency:
+                <input type="text" name="competency" autocomplete="off">
+            </label>
+        </div>
+        <div>
+            <label>skill.certification:
+                <input type="text" name="certification" autocomplete="off">
+            </label>
+        </div>
+        <div>
+            <label>skill.privateThoughts:
+                <textarea name="details"  autocomplete="off"></textarea>
+            </label>
+        </div>
+        <div>
+            <button type="submit">skills.add&#40<span style="font-family: Menlo, Consolas, monospace; color: blue;">this</span>&#41</button>
+        </div>
+    </form>
+</body>
+
+</html>

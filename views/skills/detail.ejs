@@ -28,8 +28,12 @@
 <body>
     <h2><a href="/skills">&lt;&lt;</a></h2>
     <h2>
+        <form style="display: inline-block;" method="post" action="/skills/<%= skill.id %>?_method=DELETE">
+            <button style="display: inline-block; color: brown;">X</button>
+        </form>
         <%= skill.name %>
     </h2>
+
     <ul style="list-style: none;">
         <li>
             <b>competency: </b>
@@ -41,18 +45,20 @@
         </li>
         <li>
             <b>my private thoughts: </b><a href="#" class="expand-collapse">&lt;&ltexpand at your own
-                expense&gt;&gt;</a><div id="private" class="collapsed">
+                expense&gt;&gt;</a>
+            <div id="private" class="collapsed">
                 <%= skill.details %>
-                </div>
+            </div>
+            <a href="/skills/<%= skill.id %>/edit">skill.edit&#40;&#41;</a>
             <script>
                 const expandBtn = document.querySelector('.expand-collapse');
                 const priv = document.getElementById('private');
-                expandBtn.addEventListener('click',()=>{
-                    if(priv.classList.contains('collapsed')){
+                expandBtn.addEventListener('click', () => {
+                    if (priv.classList.contains('collapsed')) {
                         priv.classList.add('expanded');
                         priv.classList.remove('collapsed');
                         expandBtn.innerText = expanded;
-                    }else{
+                    } else {
                         expandBtn.innerText = collapsed;
                         priv.classList.add('collapsed');
                         priv.classList.remove('expanded');

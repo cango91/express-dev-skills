@@ -5,22 +5,21 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <%- include('../style', {skill:''}) %>
-        <title>My dev skills list:</title>
-        <h2><a href="/">&lt;&lt;</a></h2>
-        <h2>my.dev.skills</h2>
-        <ul>
-            <% skills.forEach(s=>{ %>
-                <li>
-                    <a href="/skills/<%= s.id %>">
-                        <%= s.name%>
-                    </a>
-                </li>
-                <% }) %>
-        </ul>
+        <title>My dev skills list</title>
 </head>
 
 <body>
-
+    <h2><a href="/">&lt;&lt;</a></h2>
+    <h2>my.dev.skills</h2>
+    <ul>
+        <% skills.forEach(s=>{ %>
+            <li>
+                <a href="/skills/<%= s.id %>">
+                    <%= s.name%>
+                </a>
+            </li>
+            <% }) %>
+    </ul>
+    <a href="/skills/new">+ Add a new skill</a>
 </body>
-
 </html>
